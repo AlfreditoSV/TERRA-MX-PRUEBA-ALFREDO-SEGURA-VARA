@@ -8,7 +8,7 @@ ini_set('error_log', '/php_errors.log');
 
 
 //Manejo de rutas
-require_once 'app/controllers/RoutesController.php';
+require_once __DIR__.'/../app/controllers/RoutesController.php';
 
 $index = new RoutesController();
 $index->index();
