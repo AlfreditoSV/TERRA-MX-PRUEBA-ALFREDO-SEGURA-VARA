@@ -1,40 +1,39 @@
 <?php
 
-include_once '../interfaces/ControllerInterface.php';
+include_once __DIR__.'/../interfaces/ControllerInterface.php';
 class TaskController implements Controller{
 
-
-    static function index()
+    public function index()
     {
-       include "../../routes/web.php";
+        // TODO: Implement index() method.
     }
 
-    static function show($id)
+    public function show($id)
     {
         // TODO: Implement show() method.
     }
 
-    static function create()
+    public function create()
     {
         // TODO: Implement create() method.
     }
 
-    static function store($data)
+    public function store($data)
     {
         // TODO: Implement store() method.
     }
 
-    static function edit($id)
+    public function edit($id)
     {
         // TODO: Implement edit() method.
     }
 
-    static function update($id, $data)
+    public function update($id, $data)
     {
         // TODO: Implement update() method.
     }
 
-    static function delete($id)
+    public function delete($id)
     {
         // TODO: Implement delete() method.
     }
