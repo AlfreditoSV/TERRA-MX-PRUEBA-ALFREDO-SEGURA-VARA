@@ -1,10 +1,9 @@
 <?php
 
-include_once __DIR__.'/../interfaces/ControllerInterface.php';
+include_once __DIR__ . '/interfaces/ControllerInterface.php';
 class RoutesController implements Controller
 {
     public function index()
-
     {
         include __DIR__."/../../routes/web.php";
     }
