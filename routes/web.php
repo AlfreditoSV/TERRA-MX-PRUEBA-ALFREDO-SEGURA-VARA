@@ -13,32 +13,20 @@ if (empty($routes)){
     return;
 }
 
+
 if (isset($_SERVER['REQUEST_METHOD']))
 {
     switch ($_SERVER['REQUEST_METHOD']) {
         case 'GET':
-            $json=[
-                'status' => 200,
-                'result'=>'GET'
-            ];
+         include __DIR__.'/services/get.php';
             break;
         case 'POST':
-            $json=[
-                'status' => 200,
-                'result'=>'POST'
-            ];
+        include __DIR__.'/services/post.php';
             break;
         case 'PUT':
-            $json=[
-                'status' => 200,
-                'result'=>'PUT'
-            ];
+            include __DIR__.'/services/put.php';
             break;
         case 'DELETE':
-            $json=[
-                'status' => 200,
-                'result'=>'DELETE'
-            ];
+            include __DIR__.'/services/delete.php';
     }
-    echo json_encode($json,http_response_code($json['status']));
 }
