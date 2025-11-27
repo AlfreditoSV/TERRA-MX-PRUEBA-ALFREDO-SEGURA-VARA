@@ -9,7 +9,7 @@ class ConnectionDatabase
     {
         return [
             'host'=>'localhost',
-            'database'=>'db_terra',
+            'database'=>'tasks',
             'username'=>'root',
             'password'=>'',
             'charset'=>'utf8mb4'
