@@ -38,12 +38,13 @@ include_once  __DIR__ . '/../components/footer_component.php';
                 url: url,
                 type: 'POST',
                 data: data,
+                dataType: 'json',
                 success: function(response) {
-                     if (response.status == 'success') {
-                    alert('Task created successfully');
-                    window.location.href = 'http://terra.test';
-                          } else {
-                        alert('Error deleting task: ' + response.message);
+                    if (response.result.status == 'success') {
+                        alert('Task created successfully');
+                        window.location.href = 'http://terra.test';
+                    } else {
+                        alert('Error created task: ' + response.message);
                     }
                 },
                 error: function(error) {

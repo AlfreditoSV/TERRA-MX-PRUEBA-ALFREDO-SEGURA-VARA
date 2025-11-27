@@ -2,23 +2,25 @@
 include_once  __DIR__ . '/../components/head_component.php';
 ?>
 <div class="container">
-    <div class="row">
-        <div class="col-12 p-3 text-end">
+    <div class="row p-5">
+        <div class="col-12 mb-3">
             <a href="http://terra.test/tasks/add/" class="btn btn-primary">Creat Task</a>
         </div>
-        <div class="col-12 p-5">
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th>id</th>
-                        <th>task_name</th>
-                        <th>create_at</th>
-                        <th>update_at</th>
-                        <th>actions</th>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
+        <div class="col-12">
+            <div class="table-responsive">
+                <table class="table table-striped table-bordered">
+                    <thead>
+                        <tr>
+                            <th>id</th>
+                            <th>task_name</th>
+                            <th>create_at</th>
+                            <th>update_at</th>
+                            <th>actions</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-group-divider"></tbody>
+                </table>
+            </div>
         </div>
     </div>
 </div>
@@ -54,10 +56,11 @@ include_once  __DIR__ . '/../components/footer_component.php';
                 $.ajax({
                     url: `http://terra.test/tasks/delete/${taskId}`,
                     type: 'DELETE',
+                    dataType: 'json',
                     success: function(response) {
-                        if (response.status =='success'){
-                        alert('Task deleted successfully');
-                        location.reload();
+                         if (response.result.status == 'success') {
+                            alert('Task deleted successfully');
+                            location.reload();
                         } else {
                             alert('Error deleting task: ' + response.message);
                         }
