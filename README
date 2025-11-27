@@ -1,0 +1,44 @@
+Prueba Tecnica: CRUS-TASKS
+Empresa: Terra
+Postulante: Alfredo Segura
+Puesto:Programador
+
+
+# Introudiccion
+
+Se realizo el proyecto en arquitectura MVC con patron modular.
+
+En esta prueba es aplicado el uso de buenas practicas en la arquitectura limpia y conceptos basicos de principios SOLID.
+
+El objetivo de haber realizado la prueba de esta manera fue poder demostrar la creacion de api-basica y el consumo de esta, simulando rutas externas.
+
+No se crearon usuarios de pruebas, roles , persmisos y privatisacion de rutas, ya que la prueba no lo indica.
+
+# Objetivo
+
+Realizar un crud funcional utilizando PHP,HTML,CSS Y JQUERY. 
+
+# Puntos a evaluar
+
+● Uso adecuado de Git (historial de commits, ramas, etc.).
+● Interfaz de usuario limpia y responsiva usando HTML/CSS/jQuery.
+● Calidad y estructura del código PHP.
+● Uso eficiente de la base de datos y las consultas SQL.
+
+# Levantamiento de servidor
+
+Cuando se configure el servidor apache o ngix deberan indicar la ruta del purta en la carpeta public.
+Ejemplo: /User/Developer/Sites/Terra/public
+
+Es importante utilizar php 8.1 o posteriores.
+
+# 1.- Crea una base de datos MySQL con una tabla llamada tasks, puedes utilizar el siguiente comando : 
+
+    CREATE DATABASE tasks CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+
+# 2.- Modificar el archivo conecction_databases.php en la carpeta config tus credenciales de mysql
+# 3.- Enrutar de forma correcta el proyecto en tu servidor, recuerda apuntar a la carpeta public
+
+# Nota: La migracion la realiza de forma automatizada, no es necesario crear tablas
+
+

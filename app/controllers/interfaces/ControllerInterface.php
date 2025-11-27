@@ -1,11 +1,10 @@
 <?php
 
+//Definicion de la interfaz Controller con los metodos basicos para el manejo de peticiones HTTP
 interface Controller{
     public function index();
     public function show($id);
-    public function create();
     public function store($data);
-    public function edit($id);
     public function update($id, $data);
     public function delete($id);
 }

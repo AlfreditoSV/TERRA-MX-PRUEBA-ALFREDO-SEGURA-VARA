@@ -27,7 +27,7 @@ $id = array_filter(explode('/', $_SERVER['REQUEST_URI']))[3];
 <?php
 include_once  __DIR__ . '/../components/footer_component.php';
 ?>
-<script>   
+<script>
     $(document).ready(function() {
         let id = <?= $id; ?>;
         $.get(`http://terra.test/tasks/${id}`, function(data) {
@@ -46,12 +46,13 @@ include_once  __DIR__ . '/../components/footer_component.php';
                 url: url,
                 type: 'PUT',
                 data: data,
+                dataType: 'json',
                 success: function(response) {
-                    if (response.status == 'success') {
+                    if (response.result.status == 'success') {
                         alert('Task updated successfully');
                         window.location.href = 'http://terra.test';
                     } else {
-                        alert('Error deleting task: ' + response.message);
+                        alert('Error updated task: ' + response.message);
                     }
                 },
                 error: function(error) {
