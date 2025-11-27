@@ -1,9 +1,10 @@
 <?php
 
 include_once __DIR__.'/../../config/connection_database.php';
+
 class TableTasksCreate extends ConnectionDatabase {
 
-
+//Creacion de la tabla tasks
     public function create()
     {
         $connect = self::connection();

@@ -4,6 +4,7 @@ include_once __DIR__.'/../database/migration/25112025_table_tasks_create.php';
 class ConnectionDatabase
 {
 
+    //Configuracion a base de datos
     public static function info()
     {
         return [
@@ -16,6 +17,7 @@ class ConnectionDatabase
 
     }
 
+    //Conexion unica de base de datos
     public static function connection(){
         try{
 
@@ -40,11 +42,10 @@ class ConnectionDatabase
 
     }
 
+    //Migracion de la base de datos
   public static function migration(){
         $table=new TableTasksCreate();
         return $table->create();
   }
-
-
 
 }
